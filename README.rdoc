@@ -1,0 +1,8 @@
+= MadMimi
+
+Manage your MadMimi audience
+
+== Copyright
+
+Copyright (c) 2011 Ozéias Sant'ana. See LICENSE.txt for
+further details.
