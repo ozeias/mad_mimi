@@ -13,9 +13,10 @@ Gem::Specification.new do |s|
 
   s.summary     = %q{Manage your MadMimi audience}
 
-  s.required_rubygems_version = ">= 1.3.7"
+  s.required_rubygems_version = Gem::Requirement.new('>= 1.3.7') if s.respond_to? :required_rubygems_version=
 
-  s.add_dependency 'faraday',             '0.5.4'
+  s.add_runtime_dependency 'faraday',     '0.5.4'
+
   s.add_dependency 'faraday_middleware',  '0.3.1'
   s.add_dependency 'multi_xml',           '0.2.0'
 

@@ -1,3 +1,11 @@
+PATH
+  remote: .
+  specs:
+    mad_mimi (0.0.1)
+      faraday (= 0.5.4)
+      faraday_middleware (= 0.3.1)
+      multi_xml (= 0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -13,7 +21,6 @@ GEM
     multi_xml (0.2.0)
     multipart-post (1.1.0)
     rack (1.2.1)
-    rake (0.8.7)
     rspec (2.4.0)
       rspec-core (~> 2.4.0)
       rspec-expectations (~> 2.4.0)
@@ -30,10 +37,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.9)
-  faraday (= 0.5.4)
-  faraday_middleware (= 0.3.1)
-  multi_xml (= 0.2.0)
-  rake (= 0.8.7)
+  mad_mimi!
   rspec (~> 2.4.0)
   webmock (~> 1.6.2)
