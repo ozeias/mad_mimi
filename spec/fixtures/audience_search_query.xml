@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audience>
+  <member suppressed="false">
+    <first_name>Ozéias</first_name>
+    <last_name>Sant'ana</last_name>
+    <email>oz.santana@gmail.com</email>
+    <created_at>Tue Jan 24 11:05:25 -0400 2011</created_at>
+    <title>Mrs</title>
+    <country>BR</country>
+    <confirmed/>
+    <twitter>@ozeias</twitter>
+    <friend_name>Oz</friend_name>
+    <lists>
+      <list>dev</list>
+    </lists>
+  </member>
+</audience>

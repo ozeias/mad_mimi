@@ -14,6 +14,29 @@ describe MadMimi::Audience do
     connection.should == "http://api.madmimi.com/"
   end
 
+  describe ".search" do
+    before do
+      stub_get('/audience_members/search.xml').
+        with(:headers => {'Accept'=>'application/xml', 'User-Agent'=>'MadMimi Gem'}).
+        to_return(:status => 200, :body => fixture("audience_search.xml"), :headers => {:content_type => "application/xml; charset=utf-8"})
+
+      stub_get('/audience_members/search.xml', { :query => 'oz.santana@gmail.com'}).
+        with(:headers => {'Accept'=>'application/xml', 'User-Agent'=>'MadMimi Gem'}).
+        to_return(:status => 200, :body => fixture("audience_search_query.xml"), :headers => {:content_type => "application/xml; charset=utf-8"})
+    end
+
+    it "should get all audience members" do
+      MadMimi.audience.search.should == [
+        { "created_at"=>"Tue Jan 24 11:05:25 -0400 2011", "confirmed"=>nil, "country"=>"BR", "title"=>"Mrs", "suppressed"=>"false", "lists"=>{"list"=>"dev"}, "friend_name"=>"Oz", "last_name"=>"Sant'ana", "twitter"=>"@ozeias", "email"=>"oz.santana@gmail.com", "first_name"=>"Ozéias" },
+        { "address"=>nil, "company"=>"Mad Mimi", "city"=>nil, "zip"=>nil, "created_at"=>"Tue Apr 20 14:30:25 -0400 2010", "confirmed"=>nil, "country"=>"US", "title"=>"Mrs", "suppressed"=>"false", "lists"=>{"list"=>"test"}, "friend_name"=>"Marc", "birthday"=>nil, "phone"=>nil, "last_name"=>"Mimi", "categories"=>nil, "state"=>nil, "email"=>"support@madmimi.com", "first_name"=>"Mad" }
+      ]
+    end
+
+    it "should set the query" do
+      MadMimi.audience.search({:query => 'oz.santana@gmail.com'}).should == { "created_at"=>"Tue Jan 24 11:05:25 -0400 2011", "confirmed"=>nil, "country"=>"BR", "title"=>"Mrs", "suppressed"=>"false", "lists"=>{"list"=>"dev"}, "friend_name"=>"Oz", "last_name"=>"Sant'ana", "twitter"=>"@ozeias", "email"=>"oz.santana@gmail.com", "first_name"=>"Ozéias" }
+    end
+  end
+
   describe ".members" do
     before do
       stub_get('/audience_members').

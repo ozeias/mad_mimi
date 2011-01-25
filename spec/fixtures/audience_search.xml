@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audience>
+  <member suppressed="false">
+    <first_name>Ozéias</first_name>
+    <last_name>Sant'ana</last_name>
+    <email>oz.santana@gmail.com</email>
+    <created_at>Tue Jan 24 11:05:25 -0400 2011</created_at>
+    <title>Mrs</title>
+    <country>BR</country>
+    <confirmed/>
+    <twitter>@ozeias</twitter>
+    <friend_name>Oz</friend_name>
+    <lists>
+      <list>dev</list>
+    </lists>
+  </member>
+  <member suppressed="false">
+    <first_name>Mad</first_name>
+    <last_name>Mimi</last_name>
+    <email>support@madmimi.com</email>
+    <created_at>Tue Apr 20 14:30:25 -0400 2010</created_at>
+    <city/>
+    <phone/>
+    <company>Mad Mimi</company>
+    <title>Mrs</title>
+    <address/>
+    <state/>
+    <zip/>
+    <country>US</country>
+    <confirmed/>
+    <birthday/>
+    <categories/>
+    <friend_name>Marc</friend_name>
+    <lists>
+      <list>test</list>
+    </lists>
+  </member>
+</audience>

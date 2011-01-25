@@ -8,8 +8,8 @@ def a_post(path)
   a_request(:post, MadMimi.api_url + path)
 end
 
-def stub_get(path)
-  path = path + '?' + parameterize(MadMimi.authentication)
+def stub_get(path, options = {})
+  path = path + '?' + parameterize(options.merge(MadMimi.authentication))
   stub_request(:get, MadMimi.api_url + path)
 end
 

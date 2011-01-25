@@ -2,6 +2,20 @@ require File.expand_path('../request', __FILE__)
 module MadMimi #:nodoc
   class Audience #:nodoc
     include Request
+    # Search
+    #
+    # Performs an audience search and returns the up to the first 100 results.
+    #
+    # == Optional parameters are:
+    # * <tt>:query</tt> -- The query parameter can be any search criteria you can use in the interface. A common use would be to use this function to get all of a member’s details by sending the email address as the query.
+    # * <tt>:raw</tt> -- if you want to return all users, regardless of suppression status, add the raw=true parameter on the end of your query.
+    # * <tt>:add_list</tt> -- You can add the results of the search to a new or existing list by passing an additional add_list parameter with the name of the list.
+    #
+    # See {Search}[http://madmimi.com/developer/lists/search]
+    def search(options = {})
+      response = get('/audience_members/search.xml', options)
+      response ? response["audience"]["member"] : response
+    end
 
     # Get Audience Members
     #
@@ -14,8 +28,8 @@ module MadMimi #:nodoc
     #
     # See {Get Audience Members}[http://madmimi.com/developer/lists]
     def members(options = {})
-      members = get('/audience_members')
-      members ? members["audience"]["member"] : members
+      response = get('/audience_members')
+      response ? response["audience"]["member"] : response
     end
 
     # Get all Audience Lists
@@ -24,8 +38,8 @@ module MadMimi #:nodoc
     #
     # See {Get all Audience Lists}[http://madmimi.com/developer/lists/get-all-audience-lists]
     def lists
-      lists = get('/audience_lists/lists.xml')
-      lists ? lists["lists"]["list"] : lists
+      response = get('/audience_lists/lists.xml')
+      response ? response["lists"]["list"] : response
     end
 
     # Add Audience List Membership
