@@ -15,10 +15,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
 
-  s.add_runtime_dependency 'faraday',     '0.5.4'
+  s.add_runtime_dependency 'faraday',     '0.5.5'
 
-  s.add_dependency 'faraday_middleware',  '0.3.1'
-  s.add_dependency 'multi_xml',           '0.2.0'
+  s.add_dependency 'faraday_middleware',  '0.3.2'
+  s.add_dependency 'multi_xml',           '0.2.1'
 
   s.add_development_dependency 'rspec',   '~> 2.4.0'
   s.add_development_dependency 'webmock', '~> 1.6.2'

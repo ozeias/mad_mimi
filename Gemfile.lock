@@ -1,24 +1,24 @@
 PATH
   remote: .
   specs:
-    mad_mimi (0.0.1)
-      faraday (= 0.5.4)
-      faraday_middleware (= 0.3.1)
-      multi_xml (= 0.2.0)
+    mad_mimi (0.0.2)
+      faraday (= 0.5.5)
+      faraday_middleware (= 0.3.2)
+      multi_xml (= 0.2.1)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.3)
+    addressable (2.2.4)
     crack (0.1.8)
     diff-lcs (1.1.2)
-    faraday (0.5.4)
-      addressable (~> 2.2.2)
+    faraday (0.5.5)
+      addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
-    faraday_middleware (0.3.1)
-      faraday (~> 0.5.3)
-    multi_xml (0.2.0)
+    faraday_middleware (0.3.2)
+      faraday (~> 0.5.4)
+    multi_xml (0.2.1)
     multipart-post (1.1.0)
     rack (1.2.1)
     rspec (2.4.0)

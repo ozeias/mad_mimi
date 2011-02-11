@@ -1,6 +1,7 @@
 require "singleton"
 
 require "mad_mimi/audience"
+require "mad_mimi/mailer"
 require "mad_mimi/config"
 
 module MadMimi #:nodoc
@@ -10,8 +11,8 @@ module MadMimi #:nodoc
     # Example:
     #
     #   MadMimi.configure do |config|
-    #     config.username = "emailaddress"
-    #     config.api_key  = "api_key"
+    #     config.username = "YourMadMimiEmailAddress"
+    #     config.api_key  = "YourMadMimiApiKey"
     #   end
     #
     # Returns:
@@ -33,12 +34,16 @@ module MadMimi #:nodoc
       }
     end
 
-    def api_url
-      'http://api.madmimi.com'
+    def api_url(ssl = false)
+      "#{ssl ? 'https' : 'http'}://api.madmimi.com"
     end
 
     def audience
       MadMimi::Audience.new
+    end
+
+    def mailer
+      MadMimi::Mailer.new
     end
   end
 end

@@ -1,4 +1,5 @@
 require File.expand_path('../request', __FILE__)
+
 module MadMimi #:nodoc
   class Audience #:nodoc
     include Request

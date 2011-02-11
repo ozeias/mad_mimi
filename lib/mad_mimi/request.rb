@@ -8,13 +8,13 @@ module MadMimi
       request(:get, path, options, raw)
     end
 
-    def post(path, options={}, raw = false)
-      request(:post, path, options, raw)
+    def post(path, options={}, raw = false, ssl = false)
+      request(:post, path, options, raw, ssl)
     end
 
     private
-      def request(method, path, options, raw = false)
-        response = connection(raw).send(method) do |request|
+      def request(method, path, options, raw = false, ssl = false)
+        response = connection(raw, ssl).send(method) do |request|
           options = options.merge(MadMimi.authentication)
           case method
           when :get
@@ -27,11 +27,11 @@ module MadMimi
         raw ? response : response.body
       end
 
-      def connection(raw = false)
+      def connection(raw = false, ssl = false)
         options = {
           :headers => {'Accept' => "application/xml", 'User-Agent' => 'MadMimi Gem'},
           :ssl => { :verify => false },
-          :url => MadMimi.api_url
+          :url => MadMimi.api_url(ssl)
         }
 
         Faraday::Connection.new(options) do |builder|

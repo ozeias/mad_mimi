@@ -4,8 +4,8 @@ require 'rspec'
 require 'webmock/rspec'
 include WebMock::API
 
-def a_post(path)
-  a_request(:post, MadMimi.api_url + path)
+def a_post(path, ssl = false)
+  a_request(:post, MadMimi.api_url(ssl) + path)
 end
 
 def stub_get(path, options = {})
@@ -13,8 +13,8 @@ def stub_get(path, options = {})
   stub_request(:get, MadMimi.api_url + path)
 end
 
-def stub_post(path)
-  stub_request(:post, MadMimi.api_url + path)
+def stub_post(path, ssl = false)
+  stub_request(:post, MadMimi.api_url(ssl) + path)
 end
 
 def fixture_path
