@@ -13,7 +13,7 @@ module MadMimi #:nodoc
     # Sends a single transactional email to the recipient. Returns a unique transaction id if successful.
     #
     # == Required parameters are:
-    # * <tt>:promotion_name</tt> -- The name of the promotion Mimi will send. For +raw_html+ or +raw_plain_text+ promotions, MadMimi will automatically create or update the promotion in your account.
+    # * <tt>:promotion_name</tt> -- The name of the promotion Mimi will send. For +raw_html+ or +raw_plain_text+ promotions, Mad Mimi will automatically create or update the promotion in your account.
     # * <tt>:recipients</tt> -- The recipient (singular although the parameter name is plural) again just the email or in +Display Name <email@domain.com>+ format.
     # * <tt>:body</tt> -- Required if you have placeholders. YAML encoded replacements for any {placeholders} in your promotion.
     #

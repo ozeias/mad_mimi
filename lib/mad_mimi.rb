@@ -6,7 +6,7 @@ require "mad_mimi/config"
 
 module MadMimi #:nodoc
   class << self
-    # Sets the MadMimi configuration options. Best used by passing a block.
+    # Sets the Mad Mimi configuration options. Best used by passing a block.
     #
     # Example:
     #

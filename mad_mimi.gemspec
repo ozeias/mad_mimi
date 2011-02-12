@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = 'oz.santana@gmail.com'
   s.homepage    = 'http://railsbox.org'
 
-  s.summary     = %q{A Ruby wrapper for the MadMimi API. Deliver emails and manage your MadMimi audience}
+  s.summary     = %q{A Ruby wrapper for the Mad Mimi API. Deliver emails and manage your Mad Mimi audience}
 
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
 

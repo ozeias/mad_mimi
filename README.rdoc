@@ -1,6 +1,6 @@
-= The MadMimi Ruby Gem
+= The Mad Mimi Ruby Gem
 
-A Ruby wrapper for the MadMimi API. Deliver emails and manage your MadMimi audience.
+A Ruby wrapper for the Mad Mimi API. Deliver emails and manage your Mad Mimi audience.
 
 == Installation
 
@@ -15,7 +15,7 @@ A Ruby wrapper for the MadMimi API. Deliver emails and manage your MadMimi audie
   require "rubygems"
   require "mad_mimi"
 
-  # Sets the MadMimi configuration options. Best used by passing a block.
+  # Sets the Mad Mimi configuration options. Best used by passing a block.
   MadMimi.configure do |config|
     config.username = "YourMadMimiEmailAddress"
     config.api_key  = "YourMadMimiApiKey"
@@ -54,7 +54,7 @@ Here are some ways you can contribute:
 * by writing or editing documentation
 * by writing specifications
 * by writing code (no patch is too small: fix typos, add comments, clean up inconsistent whitespace)
-* by refactoring code
+* by refactoring {code}[https://github.com/ozeias/mad_mimi]
 * by closing {issues}[https://github.com/ozeias/mad_mimi/issues]
 * by reviewing patches
 
